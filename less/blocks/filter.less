@@ -10,7 +10,7 @@
 
 .filter__down,
 .filter__link {
-  margin-right: 15px;
+  margin-right: 20px;
   
   &:hover,
   &:active {
@@ -32,10 +32,20 @@
   padding: 5px;
   background-color: #fff;
   box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.19);
+  
+  a {
+    display: block;
+    
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .filter__down {
   position: relative;
+  color: inherit;
   
   &::after {
     content: "\203A";
@@ -79,7 +89,8 @@
 }
 
 .filter__wrap {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;

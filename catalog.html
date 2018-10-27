@@ -176,7 +176,13 @@
           <form action="#" class="filter">
             <a href="#" class="filter__link">По популярности</a>
             <a href="#" class="filter__link">По назначению</a>
-            <a href="#" class="filter__link">По цене ></a>
+            <div class="filter__select">
+              <button type="button" class="filter__down">По цене</button>
+              <div class="filter__list">
+                <a href="#">По возрастанию цены</a>
+                <a href="#">По убыванию цены</a>
+              </div>
+            </div>
             <div class="filter__select">
               <button type="button" class="filter__down">По бренду</button>
               <div class="filter__list">
@@ -192,8 +198,6 @@
                 <label for="brand5" class="filter__label">Бренд 5</label>
                 <input type="checkbox" name="radio" id="brand6" class="filter__radio">
                 <label for="brand6" class="filter__label">Бренд 6</label>
-                <input type="checkbox" name="radio" id="brand7" class="filter__radio">
-                <label for="brand7" class="filter__label">Бренд 7</label>
                 <div class="filter__wrap">
                   <button type="button" class="filter__clear">Сбросить</button>
                   <button type="button" class="filter__apply">Применить</button>
@@ -421,7 +425,7 @@
       $(this).toggleClass('sidebar__down--up');
     });
     $('.filter__down').click(function() {
-      $('.filter__list').slideToggle();
+      $(this).next().slideToggle();
       $(this).toggleClass('filter__down--up');
     });
   </script>

@@ -16,6 +16,39 @@
     &:nth-child(3n) {
       margin-right: 0;
     }
+    
+    &::after {
+      opacity: 0;
+      content: "быстрый просмотр";
+      position: absolute;
+      top: 32%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #666;
+      background-color: rgba(255, 255, 255, 0.741);
+      background-image: url(../img/icon-eye.png);
+      background-size: 19px 11px;
+      background-repeat: no-repeat;
+      background-position: center left 20px;
+      cursor: pointer;
+      .transition();
+    }
+    
+    &:hover:not(.show__item--banner),
+    &:active:not(.show__item--banner) {
+      &::after {
+        opacity: 1;
+        .transition();
+      }
+    }
   }
   
   p {
