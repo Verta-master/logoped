@@ -1,0 +1,26 @@
+.btn {
+  width: 121px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgb(51, 51, 51);
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: @orange;
+    border-color: @orange;
+    color: #fff;
+    .transition();
+  }
+}
+
+.btn-hover {
+  background-color: @orange;
+  border-color: @orange;
+  color: #fff;
+  .transition();
+}
