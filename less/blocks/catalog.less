@@ -1,0 +1,25 @@
+.catalog__columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.catalog__content {
+  width: 850px;
+  margin-bottom: 40px;
+  
+  .show__item {
+    &:nth-child(4n) {
+      margin-right: 20px;
+    }
+    
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}

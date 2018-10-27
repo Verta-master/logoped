@@ -1,0 +1,36 @@
+.pages {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pages__link {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1;
+  color: #666;
+  
+  &--next {
+    padding-left: 15px;
+    width: auto;
+  }
+}
+
+a.pages__link {
+  &:hover,
+  &:active {
+    color: #000;
+  }
+}
+
+span.pages__link {
+  color: #000;
+  background-color: rgba(204, 204, 204, 0.529);
+}

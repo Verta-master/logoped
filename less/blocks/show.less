@@ -99,8 +99,8 @@
     .transition();
   }
   
-  &:hover,
-  &:active {
+  &:hover:not(.show__item--banner),
+  &:active:not(.show__item--banner) {
     z-index: 5;
     
     .show__btn {
@@ -109,6 +109,13 @@
     &:before {
       opacity: 1;
       .transition();
+    }
+  }
+  
+  &--banner {
+    .show__img {
+      color: #fff;
+      background-color: @orange;
     }
   }
 }
