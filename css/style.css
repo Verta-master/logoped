@@ -467,7 +467,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 .header__block {
   display: -webkit-box;
@@ -492,7 +492,7 @@ button {
 }
 .header__contact,
 .header__user {
-  margin-left: 40px;
+  margin-left: 45px;
 }
 .header__call:hover,
 .header__call:active {
@@ -519,6 +519,7 @@ button {
 }
 .header__cart {
   margin-left: 20px;
+  margin-right: 20px;
   background-image: url(../img/icon-cart.png);
   background-repeat: no-repeat;
   background-size: 27px 20px;
@@ -620,9 +621,9 @@ button {
   top: 100%;
   left: 30px;
   right: 30px;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 30px;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-right: 50px;
   background-color: #fff;
   -webkit-box-pack: justify;
@@ -724,7 +725,11 @@ button {
   text-transform: uppercase;
   background-color: #fff;
 }
+.promo {
+  padding-top: 10px;
+}
 .promo__title {
+  margin-bottom: 30px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -745,6 +750,7 @@ button {
 }
 .swiper-button-prev,
 .swiper-button-next {
+  top: 46%;
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -807,6 +813,8 @@ button {
   letter-spacing: 0.1em;
 }
 .title-h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 700;
@@ -815,7 +823,7 @@ button {
 }
 .btn {
   width: 121px;
-  height: 30px;
+  height: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,7 +883,7 @@ button {
   transition: ease-out 0.3s;
 }
 .show__color p {
-  margin-top: 30px;
+  margin-top: 32px;
   margin-bottom: 0;
 }
 .show__color p b {
@@ -1024,6 +1032,7 @@ button {
           justify-content: flex-start;
 }
 .show__title {
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1056,17 +1065,26 @@ button {
   margin-right: auto;
 }
 .recommend {
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 1px;
 }
 .recommend__block {
   min-height: 510px;
-  padding-top: 30px;
+  padding-top: 33px;
   padding-bottom: 30px;
   background-color: #f5f5f5;
 }
 .school {
-  padding-top: 5px;
+  padding-top: 30px;
+  padding-bottom: 3px;
   background-color: #f5f5f5;
+}
+.school .show__list {
+  margin-top: 47px;
+}
+.category {
+  padding-top: 50px;
+  padding-bottom: 45px;
 }
 .category__list {
   margin: 0;
@@ -1134,6 +1152,7 @@ button {
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0.075em;
+  margin-top: 5px;
 }
 .category__all li:first-child {
   color: #ff6633;
@@ -1147,7 +1166,7 @@ button {
   text-decoration: underline;
 }
 .blog {
-  padding-top: 10px;
+  padding-top: 45px;
   background-color: #f5f5f5;
 }
 .blog__slide {
@@ -1160,8 +1179,8 @@ button {
   height: auto;
 }
 .about {
-  padding-top: 35px;
-  padding-bottom: 45px;
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 .about__wrap {
   display: -webkit-box;
@@ -1182,12 +1201,13 @@ button {
 }
 .about__img {
   width: 220px;
+  margin-right: 55px;
   padding: 8px 12px;
   border: 1px solid #ff6633;
 }
 .review {
-  padding-top: 5px;
-  padding-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 60px;
   background-color: #f5f5f5;
 }
 .review__list {
@@ -1205,7 +1225,7 @@ button {
           align-items: flex-start;
 }
 .review__item {
-  width: 30%;
+  width: 32%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1236,8 +1256,8 @@ button {
   overflow: hidden;
 }
 .footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 50px;
   color: #fff;
   font-size: 12px;
   line-height: 22px;
@@ -1253,16 +1273,23 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-left: 130px;
+  padding-right: 50px;
 }
 .footer__menu {
   margin: 0;
   padding: 0;
   list-style: none;
   text-transform: uppercase;
+  margin-right: auto;
 }
 .footer__menu a:hover,
 .footer__menu a:active {
   border-bottom: 1px solid #fff;
+}
+.footer__contacts {
+  margin-left: auto;
+  margin-right: 60px;
 }
 .footer__contacts a {
   display: block;
@@ -1292,7 +1319,7 @@ button {
           align-items: center;
 }
 .social li {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .social li:hover,
 .social li:active {
