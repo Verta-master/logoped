@@ -1,3 +1,105 @@
 .filter {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-size: 12px;
+  color: #666;
+}
+
+.filter__down,
+.filter__link {
+  margin-right: 15px;
   
+  &:hover,
+  &:active {
+    color: #000;
+  }
+}
+
+.filter__select {
+  position: relative;
+}
+
+.filter__list {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  width: 165px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.19);
+}
+
+.filter__down {
+  position: relative;
+  
+  &::after {
+    content: "\203A";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    transform: rotate(90deg);
+    font-size: 16px;
+  }
+  
+  &--up::after {
+    transform: rotate(-90deg);
+  }
+}
+
+.filter__radio {
+  display: none;
+}
+
+.filter__label {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  line-height: 20px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(102, 102, 102);
+  }
+}
+
+.filter__radio:checked + .filter__label::after {
+  background-color: @orange;
+  border-color: @orange;
+}
+
+.filter__wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__clear {
+  border-bottom: 1px solid #fff;
+  
+  &:hover,
+  &:active {
+    border-color: #666;
+  }
+}
+
+.filter__apply {
+  color: @orange;
+  border-bottom: 1px solid @orange;
+  
+  &:hover,
+  &:active {
+    border-color: #fff;
+  }
 }
