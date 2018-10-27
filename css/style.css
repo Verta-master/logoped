@@ -449,12 +449,53 @@ button {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
 }
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+h1 span {
+  margin-left: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+  letter-spacing: 0.06em;
+}
 .wrapper {
   width: 1200px;
   padding-left: 30px;
   padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+.more {
+  width: 267px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  color: #000;
+  border: 1px solid #333333;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.more:hover,
+.more:active {
+  background-color: #ff6633;
+  border-color: #ff6633;
+  color: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .header__wrap {
   display: -webkit-box;
@@ -967,23 +1008,27 @@ button {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
-.show__item:hover,
-.show__item:active {
+.show__item:hover:not(.show__item--banner),
+.show__item:active:not(.show__item--banner) {
   z-index: 5;
 }
-.show__item:hover .show__btn,
-.show__item:active .show__btn {
+.show__item:hover:not(.show__item--banner) .show__btn,
+.show__item:active:not(.show__item--banner) .show__btn {
   background-color: #ff6633;
   border-color: #ff6633;
   color: #fff;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
-.show__item:hover:before,
-.show__item:active:before {
+.show__item:hover:not(.show__item--banner):before,
+.show__item:active:not(.show__item--banner):before {
   opacity: 1;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.show__item--banner .show__img {
+  color: #fff;
+  background-color: #ff6633;
 }
 .show__img {
   position: relative;
@@ -1324,4 +1369,103 @@ button {
 .social li:hover,
 .social li:active {
   opacity: 0.7;
+}
+.breadcrumbs {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.breadcrumbs__link {
+  color: #666666;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+a.breadcrumbs__link {
+  position: relative;
+  margin-right: 15px;
+}
+a.breadcrumbs__link::after {
+  content: "/";
+  position: relative;
+  bottom: 0;
+  right: -10px;
+}
+a.breadcrumbs__link:hover,
+a.breadcrumbs__link:active {
+  color: #000;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.catalog__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.catalog__content {
+  width: 850px;
+  margin-bottom: 40px;
+}
+.catalog__content .show__item:nth-child(4n) {
+  margin-right: 20px;
+}
+.catalog__content .show__item:nth-child(3n) {
+  margin-right: 0;
+}
+.catalog__content p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.sidebar {
+  width: 270px;
+}
+.pages {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pages__link {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  line-height: 1;
+  color: #666;
+}
+.pages__link--next {
+  padding-left: 15px;
+  width: auto;
+}
+a.pages__link:hover,
+a.pages__link:active {
+  color: #000;
+}
+span.pages__link {
+  color: #000;
+  background-color: rgba(204, 204, 204, 0.529);
 }
