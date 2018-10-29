@@ -1231,12 +1231,53 @@ h1 span {
 }
 .blog__slide {
   width: 484px;
+}
+.blog__link {
+  display: block;
+  position: relative;
+  width: 100%;
   height: 246px;
 }
-.blog__slide img {
+.blog__link img {
   display: block;
   width: 100%;
   height: auto;
+}
+.blog__link:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.blog__link:after {
+  opacity: 0;
+  content: "СМОТРЕТЬ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  background-color: #ffffff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.blog__link:hover:before,
+.blog__link:active:before,
+.blog__link:hover:after,
+.blog__link:active:after {
+  opacity: 1;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .about {
   padding-top: 50px;
@@ -2737,5 +2778,173 @@ span.pages__link {
   }
   .about__text {
     width: 400px;
+  }
+}
+@media (max-width: 766px) {
+  .promo__title,
+  .header__sum,
+  .header__login,
+  .header__contact,
+  .header__time {
+    display: none;
+  }
+  .header__cart {
+    min-height: 20px;
+    margin: 0;
+  }
+  .logo img {
+    width: 41px;
+  }
+  .logo p {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .header__user {
+    margin-left: 0;
+  }
+  .menu__btn {
+    top: 15px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 33px;
+    height: 33px;
+    font-size: 26px;
+  }
+  .promo__slider {
+    height: 150px;
+  }
+  .promo__slider img {
+    height: 100%;
+    max-width: none;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .promo {
+    padding-top: 0;
+  }
+  .promo__item {
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .promo__item img {
+    height: 40px;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .category__item,
+  .show__item,
+  .show__block {
+    width: 48%;
+  }
+  .show__item:before {
+    width: 120%;
+  }
+  .category__img,
+  .show__img,
+  .show__border,
+  .show__color {
+    height: 154px;
+    font-size: 11px;
+    line-height: 14px;
+  }
+  .show__border {
+    padding: 15px;
+  }
+  .show__border p {
+    margin-bottom: 0;
+    margin-top: 7px;
+  }
+  .show__color {
+    padding: 10px 5px;
+  }
+  .show__color p {
+    margin-top: 10px;
+  }
+  .show__photo {
+    width: 72px;
+    height: 72px;
+  }
+  .show__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .show__price-new,
+  .show__price-active,
+  .show__price-old {
+    font-size: 14px;
+    line-height: 1.16;
+  }
+  .show__price-old {
+    margin-right: 5px;
+  }
+  .review,
+  .about,
+  .blog,
+  .category {
+    padding-top: 20px;
+  }
+  .category__item p {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 52%;
+  }
+  .footer__social p,
+  .about__logo {
+    display: none;
+  }
+  .about__img,
+  .about__text {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .about__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .review__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .review__item {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .review {
+    padding-bottom: 5px;
+  }
+  .footer__wrap {
+    display: block;
+  }
+  .footer {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+  .footer__contacts address {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px;
+  }
+  .footer__phone {
+    font-size: 16px;
+    font-weight: 600;
   }
 }
