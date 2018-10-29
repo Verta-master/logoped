@@ -23,6 +23,12 @@
 .menu__item {
   flex-grow: 1;
   
+  &--login,
+  &--phone,
+  &:first-child {
+    display: none;
+  }
+  
   &:hover,
   &:active,
   &--active {
@@ -47,6 +53,10 @@
   letter-spacing: 0.1em;
   text-align: center;
   .transition();
+}
+
+.menu__drop-btn {
+  display: none;
 }
 
 .menu__drop {
