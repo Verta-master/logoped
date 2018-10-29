@@ -1,0 +1,32 @@
+.slider {
+  padding-top: 10px;
+  margin-bottom: 30px;
+  
+  .swiper-wrapper {
+    display: flex;
+  }
+  
+  .show__btn {
+    opacity: 0;
+    .transition();
+  }
+  
+  .show__item {
+    margin-right: 0;
+    
+    &:hover,
+    &:active {
+      .show__btn {
+        opacity: 1;
+        .transition();
+      }
+    }
+  }
+}
+
+.slider__prev,
+.slider__next {
+  background-color: rgba(255,255,255,0);
+  color: rgb(204, 204, 204);
+  border: 1px solid rgb(204, 204, 204);
+}

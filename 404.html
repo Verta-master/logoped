@@ -5,6 +5,7 @@
   <meta name="robots" content="noindex">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Bсе для логопеда</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -96,11 +97,13 @@
     <div class="info wrapper">
       <p class="info__title">404 — Страница не найдена</p>
       <p class="info__text">Вы перешли по неправильной ссылке</p>
-      
-      <div class="show">
-        <p class="title">Логопеды выбирают</p>
-        <ul class="show__list">
-          <li class="show__item">
+    </div>
+    
+    <div class="show wrapper">
+      <p class="title">Логопеды выбирают</p>
+      <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide show__item">
             <a href="#" class="show__img">
               <img src="img/img-5.jpg" alt="Логопедический массажер Мышка" width="242" height="242">
               <span class="show__new">НОВИНКА</span>
@@ -112,8 +115,8 @@
               </div>
               <a href="#" class="btn show__btn">купить</a>
             </div>
-          </li>
-          <li class="show__item">
+          </div>
+          <div class="swiper-slide show__item">
             <a href="#" class="show__img">
               <img src="img/img-6.jpg" alt="Игрушка Поймай шарик" width="176" height="176">
               <span class="show__new show__hidden">НОВИНКА</span>
@@ -125,8 +128,8 @@
               </div>
               <a href="#" class="btn show__btn">купить</a>
             </div>
-          </li>
-          <li class="show__item">
+          </div>
+          <div class="swiper-slide show__item">
             <a href="#" class="show__img">
               <img src="img/img-7.jpg" alt="Свистулька расписная Петушок" width="168" height="169">
               <span class="show__new show__hidden">НОВИНКА</span>
@@ -138,8 +141,8 @@
               </div>
               <a href="#" class="btn show__btn">купить</a>
             </div>
-          </li>
-          <li class="show__item">
+          </div>
+          <div class="swiper-slide show__item">
             <a href="#" class="show__img">
               <img src="img/img-8.jpg" alt="Кукла–рукавичка Мышка" width="216" height="229">
               <span class="show__new show__hidden">НОВИНКА</span>
@@ -151,9 +154,39 @@
               </div>
               <a href="#" class="btn show__btn">купить</a>
             </div>
-          </li>
-        </ul>
+          </div>
+          <div class="swiper-slide show__item">
+            <a href="#" class="show__img">
+              <img src="img/img-5.jpg" alt="Логопедический массажер Мышка" width="242" height="242">
+              <span class="show__new">НОВИНКА</span>
+            </a>
+            <div class="show__info">
+              <p class="show__title">Логопедический массажер Мышка</p>
+              <div class="show__price">
+                <span class="show__price-active">1000 руб.</span>
+              </div>
+              <a href="#" class="btn show__btn">купить</a>
+            </div>
+          </div>
+          <div class="swiper-slide show__item">
+            <a href="#" class="show__img">
+              <img src="img/img-6.jpg" alt="Игрушка Поймай шарик" width="176" height="176">
+              <span class="show__new show__hidden">НОВИНКА</span>
+            </a>
+            <div class="show__info">
+              <p class="show__title">Игрушка Поймай шарик</p>
+              <div class="show__price">
+                <span class="show__price-active">670 руб.</span>
+              </div>
+              <a href="#" class="btn show__btn">купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev slider__prev">&lsaquo;</div>
+        <div class="swiper-button-next slider__next">&rsaquo;</div>
       </div>
+      <ul class="show__list">
+      </ul>
     </div>
   </main>
   
@@ -198,5 +231,21 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+
+  <!-- Slider -->
+  <script>
+    var mySwiper = new Swiper ('.slider', {
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    });
+  </script>
 </body>
 </html>
