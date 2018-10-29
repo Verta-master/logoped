@@ -634,6 +634,11 @@ h1 span {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.menu__item--login,
+.menu__item--phone,
+.menu__item:first-child {
+  display: none;
+}
 .menu__item:hover .menu__link,
 .menu__item:active .menu__link,
 .menu__item--active .menu__link {
@@ -655,6 +660,9 @@ h1 span {
   text-align: center;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.menu__drop-btn {
+  display: none;
 }
 .menu__drop {
   display: none;
@@ -1252,7 +1260,15 @@ h1 span {
   margin-top: 0;
 }
 .about__img {
-  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 55px;
   padding: 8px 12px;
   border: 1px solid #ff6633;
@@ -2549,4 +2565,177 @@ span.pages__link {
 .modal__link:hover,
 .modal__link:active {
   border-color: rgba(255, 255, 255, 0);
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .menu__drop {
+    left: 10px;
+    right: 10px;
+  }
+  .promo__slider {
+    height: 300px;
+  }
+  .category__list,
+  .show__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .category__item,
+  .show__item,
+  .show__block {
+    margin-right: 0;
+  }
+  .category__all {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about__img {
+    margin-right: 0;
+  }
+  .footer__contacts,
+  .footer__menu {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1022px) {
+  .menu__btn {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icon-menu-ham.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 19px;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(48, 48, 48, 0.19);
+            box-shadow: 0px 3px 5px 0px rgba(48, 48, 48, 0.19);
+  }
+  .header {
+    position: relative;
+    border-bottom: 1px solid #999999;
+  }
+  .header__wrap {
+    padding-left: 60px;
+  }
+  .menu {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .menu--opened .menu__btn {
+    background-image: url(../img/icon-menu-cross.svg);
+    background-size: 24px 24px;
+  }
+  .menu__wrap {
+    position: static;
+  }
+  .menu__link {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .menu__item:first-child {
+    display: block;
+  }
+  .menu__item--login {
+    display: block;
+    color: #ff6633;
+  }
+  .menu__item--phone {
+    display: block;
+  }
+  .menu__item--phone .menu__link {
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .menu__item:hover .menu__link,
+  .menu__item:active .menu__link,
+  .menu__item--active .menu__link {
+    background-color: #fff;
+  }
+  .menu__item:hover .menu__drop,
+  .menu__item:active .menu__drop {
+    display: none;
+  }
+  .menu__drop-btn {
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    line-height: 1;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .menu__drop-btn--up {
+    top: 3px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .menu__drop {
+    position: static;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .menu__subitem--title,
+  .menu__selected {
+    display: none;
+  }
+  .menu__sublist:nth-child(n+2) {
+    display: none;
+  }
+  .promo__slider {
+    height: 270px;
+  }
+  .promo__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .promo__item {
+    width: 50%;
+    margin-bottom: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-right: 0;
+    text-align: center;
+  }
+  .promo__item p {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 200px;
+  }
+  .about__wrap img {
+    width: 100px;
+    height: auto;
+  }
+  .about__text {
+    width: 400px;
+  }
 }
