@@ -1,0 +1,124 @@
+.basket { 
+  padding-top: 30px;
+  background-color: @grey;
+  
+  .title-h2 {
+    text-align: left;
+  }
+}
+
+.basket__total {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.basket__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__form {
+  width: 490px;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.basket__more {
+  width: 625px;
+  padding: 20px;
+  background-color: #fff;
+  
+  .show__btn {
+    display: none;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .show__item {
+    margin-bottom: 0;
+    
+    &:hover,
+    &:active {
+      .show__btn {
+        display: flex;
+      }
+    }
+  }
+}
+
+.basket__radio {
+  display: none;
+}
+
+.basket__label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 406px;
+  min-height: 120px;
+  margin-bottom: 35px;
+  padding: 20px;
+  padding-left: 70px;
+  border: 1px solid rgb(153, 153, 153);
+  
+  b {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: 1px solid rgb(153, 153, 153);
+    background-image: url(../img/icon-tick-grey.png);
+    background-size: 16px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.basket__radio:checked + .basket__label {
+  border-color: @orange;
+  
+  &::before {
+    background-color: @orange;
+    border-color: @orange;
+    background-image: url(../img/icon-tick-white.png);
+  }
+}
+
+.basket__btn {
+  margin-top: 45px;
+  width: 176px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: @orange;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: #fc5017;
+    .transition();
+  }
+}
+
+.basket__title {
+  font-size: 16px;
+  font-weight: 600;
+}
