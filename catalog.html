@@ -109,8 +109,48 @@
       <span class="breadcrumbs__link">Постановочные зонды одиночные</span>
     </nav>
     
+    <!--  Mobile filter only      -->
+    <div class="sort">
+      <p class="sort__title">Сортировать</p>
+      <button type="button" class="sort__close" title="Закрыть фильтр"></button>
+      <form action="#" class="sort__filter">
+        <button type="button" class="sort__label sort__label--brand">По бренду</button>
+        <div class="sort__brand">
+          <input type="checkbox" name="brand" id="brand1" class="sort__radio">
+          <label for="brand1" class="sort__label">Бренд 1</label>
+          <input type="checkbox" name="brand" id="brand2" class="sort__radio">
+          <label for="brand2" class="sort__label">Бренд 2</label>
+          <input type="checkbox" name="brand" id="brand3" class="sort__radio" checked>
+          <label for="brand3" class="sort__label">Бренд 3</label>
+          <input type="checkbox" name="brand" id="brand4" class="sort__radio">
+          <label for="brand4" class="sort__label">Бренд 4</label>
+          <input type="checkbox" name="brand" id="brand5" class="sort__radio">
+          <label for="brand5" class="sort__label">Бренд 5</label>
+          <input type="checkbox" name="brand" id="brand6" class="sort__radio">
+          <label for="brand6" class="sort__label">Бренд 6</label>
+        </div>
+        <div class="sort__default">
+          <input type="radio" name="radio" id="type" class="sort__radio">
+          <label for="type" class="sort__label">По назначению</label>
+          <input type="radio" name="radio" id="popular" class="sort__radio">
+          <label for="popular" class="sort__label">По популярности</label>
+          <input type="radio" name="radio" id="action" class="sort__radio" checked>
+          <label for="action" class="sort__label">Только акции</label>
+          <input type="radio" name="radio" id="price" class="sort__radio">
+          <label for="price" class="sort__label">По возрастанию цены</label>
+          <input type="radio" name="radio" id="down" class="sort__radio">
+          <label for="down" class="sort__label">По убыванию цены</label>
+        </div>
+        <div class="sort__wrap">
+          <button type="button" class="btn sort__clear">Сбросить</button>
+          <button type="button" class="btn sort__apply">Применить</button>
+        </div>
+      </form>
+    </div>
+    <!--  End of mobile filter  -->
+    
     <section class="catalog wrapper">
-      <h1>Постановочные зонды одиночные<span>35 товаров</span></h1>
+      <h1>Постановочные зонды одиночные<span>35<i> товаров</i></span></h1>
       
       <div class="catalog__columns">
         <nav class="sidebar">
@@ -183,6 +223,7 @@
         </nav>
 
         <div class="catalog__content">
+          <!--   Desktop filter only      -->
           <form action="#" class="filter">
             <a href="#" class="filter__link">По популярности</a>
             <a href="#" class="filter__link">По назначению</a>
@@ -216,6 +257,8 @@
             </div>
             <a href="#" class="filter__link">Только акции</a>
           </form>
+          
+          <button type="button" class="catalog__filter">Сортировать <span>&rsaquo;</span></button>
 
           <ul class="show__list">
             <li class="show__item">
@@ -477,6 +520,17 @@
     $('.filter__down').click(function() {
       $(this).next().slideToggle();
       $(this).toggleClass('filter__down--up');
+    });
+    $('.catalog__filter').click(function() {
+      $('.sort').slideDown();
+    });
+    $('.sort__close').click(function() {
+      $('.sort').slideUp();
+    });
+    $('.sort__label--brand').click(function() {
+      $('.sort__default').slideToggle();
+      $('.sort__brand').slideToggle();
+      $(this).toggleClass('sort__label--up');
     });
   </script>
 </body>
