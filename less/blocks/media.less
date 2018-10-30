@@ -65,6 +65,17 @@
   .basket__btns {
     width: 15%;
   }
+  .card__slider {
+    width: 50%;
+    padding-right: 0;
+  }
+  .card__info {
+    width: 50%;
+    padding-left: 20px;
+  }
+  .card__img {
+    width: 100%;
+  }
 }
 
 //---------------------------------------------
@@ -218,6 +229,9 @@
   .form__wrap {
     justify-content: space-between;
   }
+  .card__nav .breadcrumbs {
+    padding-top: 10px;
+  }
 }
 
 //-------------------------------
@@ -319,6 +333,107 @@
   }
   .show__item {
     min-height: 256px;
+  }
+  .card__wrap {
+    flex-direction: column-reverse;
+  }
+  .card__info,
+  .card__slider {
+    width: 100%;
+    padding-left: 0;
+    border-right: 0;
+  }
+  .card__nav .breadcrumbs {
+    position: static;
+    max-width: 100%;
+  }
+  .breadcrumbs__link {
+    font-size: 10px;
+  }
+  .card__info {
+    padding-top: 0;
+  }
+  .view__price,
+  .view__newprice,
+  .view__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .view__oldprice {
+    font-size: 14px;
+  }
+  .card__benefits {
+    display: none;
+  }
+  .card__slider {
+    padding-top: 0;
+  }
+  .card__img {
+    height: 315px;
+  }
+  .card__thumbs {
+    display: none;
+  }
+  .card-order {
+    display: flex;
+    flex-direction: column;
+    
+    .show {
+      order: 3;
+    }
+    
+    .feedback {
+      order: 2;
+    }
+  }
+  .card {
+    order: 1;
+  }
+  .feedback {
+    background-color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #999;
+  }
+  .feedback__wrap {
+    padding: 10px 0;
+  }
+  .feedback__title {
+    display: block;
+  }
+  .feedback__btn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .feedback__list {
+    margin-top: 25px;
+  }
+  .feedback__item {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .feedback__info {
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .feedback__rating {
+    margin-right: 0;
+    width: 65px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .feedback__name time,
+  .feedback__name {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .feedback__name time {
+    color: #9a9a9a
+  }
+  .feedback__name {
+    max-width: 230px;
   }
 }
 
@@ -599,5 +714,5 @@
   }
   .slider .show__item:nth-child(n+5) {
     display: none;
-  } 
+  }
 }
