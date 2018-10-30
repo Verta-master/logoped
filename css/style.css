@@ -1358,6 +1358,7 @@ main {
 .review__item p {
   margin: 0;
   text-align: center;
+  max-width: 100%;
 }
 .review__item .review__name {
   font-weight: 700;
@@ -3494,5 +3495,10 @@ span.pages__link {
   }
   .catalog h1 {
     margin-bottom: 15px;
+  }
+  .catalog__content .show__item .show__img::after {
+    padding: 10px 5px;
+    padding-left: 40px;
+    background-position: center left 10px;
   }
 }
