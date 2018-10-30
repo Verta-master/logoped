@@ -2643,6 +2643,30 @@ span.pages__link {
     margin-right: 0;
     margin-left: 0;
   }
+  .slider .swiper-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .slider__next,
+  .slider__prev {
+    display: none;
+  }
+  .basket__more {
+    display: none;
+  }
+  .basket__form {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .basket__line .title,
+  .basket__item {
+    width: 50%;
+  }
+  .basket__remove {
+    opacity: 1;
+  }
 }
 @media (max-width: 1022px) {
   .menu__btn {
@@ -2803,7 +2827,7 @@ span.pages__link {
     margin-left: 0;
   }
   .menu__btn {
-    top: 15px;
+    top: 10px;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -2831,6 +2855,55 @@ span.pages__link {
   .promo__item img {
     height: 40px;
     width: auto;
+  }
+  .info__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .info__text {
+    margin-top: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  .info {
+    padding-bottom: 110px;
+    padding-top: 12px;
+    margin-bottom: 30px;
+  }
+  .header__wrap {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .slider {
+    margin-bottom: 0;
+  }
+  .slider .show__btn {
+    opacity: 1;
+  }
+  .show__btn {
+    background-color: #ff6633;
+    border-color: #ff6633;
+    color: #fff;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+    margin-top: auto;
+  }
+  .show__btn:hover,
+  .show__btn:active {
+    background-color: #fc5017;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+  }
+  .show__price {
+    margin-bottom: 10px;
+  }
+  .show__item {
+    min-height: 256px;
   }
 }
 @media (max-width: 480px) {
@@ -2880,7 +2953,9 @@ span.pages__link {
   .show__price-old {
     margin-right: 5px;
   }
-  .review,
+  .review {
+    padding-top: 10px;
+  }
   .about,
   .blog,
   .category {
@@ -2946,5 +3021,48 @@ span.pages__link {
   .footer__phone {
     font-size: 16px;
     font-weight: 600;
+  }
+  .menu__list {
+    padding-left: 15px;
+  }
+  .menu__link {
+    line-height: 34px;
+  }
+  .menu__subitem {
+    font-size: 11px;
+    line-height: 22px;
+  }
+  .promo__list {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .promo__item img {
+    height: 30px;
+  }
+  .promo__item {
+    margin-bottom: 20px;
+  }
+  .promo__item p {
+    margin-top: 10px;
+  }
+  .recommend {
+    padding-top: 10px;
+    background-color: #f5f5f5;
+  }
+  .recommend .title-h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .recommend__block {
+    padding-top: 0;
+  }
+  .category {
+    padding-bottom: 20px;
+  }
+  .about {
+    padding-bottom: 10px;
+  }
+  .about .title-h2 {
+    margin-bottom: 20px;
   }
 }
