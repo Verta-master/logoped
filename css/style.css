@@ -2579,6 +2579,7 @@ span.pages__link {
 }
 .slider {
   padding-top: 10px;
+  padding-bottom: 40px;
   margin-bottom: 30px;
 }
 .slider .swiper-wrapper {
@@ -2597,6 +2598,7 @@ span.pages__link {
 .slider .show__item {
   margin-right: 0;
   margin-bottom: 0;
+  min-height: 421px;
 }
 .slider .show__item:hover .show__btn,
 .slider .show__item:active .show__btn {

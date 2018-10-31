@@ -242,18 +242,18 @@
             <div class="filter__select">
               <button type="button" class="filter__down">По бренду</button>
               <div class="filter__list">
-                <input type="checkbox" name="radio" id="brand1" class="filter__radio">
-                <label for="brand1" class="filter__label">Бренд 1</label>
-                <input type="checkbox" name="radio" id="brand2" class="filter__radio">
-                <label for="brand2" class="filter__label">Бренд 2</label>
-                <input type="checkbox" name="radio" id="brand3" class="filter__radio" checked>
-                <label for="brand3" class="filter__label">Бренд 3</label>
-                <input type="checkbox" name="radio" id="brand4" class="filter__radio">
-                <label for="brand4" class="filter__label">Бренд 4</label>
-                <input type="checkbox" name="radio" id="brand5" class="filter__radio">
-                <label for="brand5" class="filter__label">Бренд 5</label>
-                <input type="checkbox" name="radio" id="brand6" class="filter__radio">
-                <label for="brand6" class="filter__label">Бренд 6</label>
+                <input type="checkbox" name="radio" id="radio1" class="filter__radio">
+                <label for="radio1" class="filter__label">Бренд 1</label>
+                <input type="checkbox" name="radio" id="radio2" class="filter__radio">
+                <label for="radio2" class="filter__label">Бренд 2</label>
+                <input type="checkbox" name="radio" id="radio3" class="filter__radio" checked>
+                <label for="radio3" class="filter__label">Бренд 3</label>
+                <input type="checkbox" name="radio" id="radio4" class="filter__radio">
+                <label for="radio4" class="filter__label">Бренд 4</label>
+                <input type="checkbox" name="radio" id="radio5" class="filter__radio">
+                <label for="radio5" class="filter__label">Бренд 5</label>
+                <input type="checkbox" name="radio" id="radio6" class="filter__radio">
+                <label for="radio6" class="filter__label">Бренд 6</label>
                 <div class="filter__wrap">
                   <button type="button" class="filter__clear">Сбросить</button>
                   <button type="button" class="filter__apply">Применить</button>
@@ -531,13 +531,22 @@
   
   <!-- Sidebar & Filter -->
   <script>
-    $('.sidebar__down').click(function() {
-      $(this).next().slideToggle();
-      $(this).toggleClass('sidebar__down--up');
+    $('.sidebar__item').click(function(e) {
+      e.preventDefault();
+      $('.sidebar__item .sidebar__sublist').slideToggle();
+      $('.sidebar__item .sidebar__down').toggleClass('sidebar__down--up');
     });
-    $('.filter__down').click(function() {
+    $('.filter__down').click(function(e) {
+      e.stopPropagation();
       $(this).next().slideToggle();
       $(this).toggleClass('filter__down--up');
+    });
+    $(document).mouseup(function (e) {
+      var container = $('.filter__list');
+      if (container.has(e.target).length === 0){
+        $('.filter__list').slideUp();
+        $('.filter__down').removeClass('filter__down--up');
+      }
     });
     $('.catalog__filter').click(function() {
       $('.sort').slideDown();
