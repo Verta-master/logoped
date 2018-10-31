@@ -20,10 +20,10 @@
         </div>
         <div class="header__contact">
           <a href="tel:+74951207547" class="header__phone">+7 (495) 120 75 47</a>
-          <a href="#" class="header__call">заказать звонок</a>
+          <a data-fancybox data-src="#call" href="javascript:;" class="header__call">заказать звонок</a>
         </div>
         <div class="header__user">
-          <a href="#" class="header__login" title="Войти"></a>
+          <a data-fancybox data-src="#login" href="javascript:;" class="header__login" title="Войти"></a>
           <a href="#" class="header__cart" title="Корзина">
             <span class="header__number">(2)</span>
             <p class="header__sum">10 080 руб</p>
@@ -98,6 +98,10 @@
             <a href="Tel:+74951207547" class="menu__link">+7 (495) 120 75 47</a>
           </li>
         </ul>
+        <form action="#" method="get" class="search">
+          <input type="text" class="search__input" placeholder="Поиск">
+          <button type="button" class="search__btn" title="Поиск"></button>
+        </form>
       </div>
     </nav>
   </header>
@@ -297,6 +301,37 @@
       </div>
     </div>
   </footer>
+  
+    <!-- Modal windows -->
+  <div style="display: none;" id="login" class="modal">
+    <p class="title-h2">Вход</p>
+    <form action="#" method="post" class="modal__form">
+      <label for="email" class="modal__label">E-mail*</label>
+      <input type="email" id="email" class="form__input" required>
+      <label for="password" class="modal__label">Пароль*</label>
+      <input type="password" id="password" class="form__input" required>
+      <input type="checkbox" id="check" class="form__checkbox" checked>
+      <label for="check" class="form__check">Запомнить меня</label>
+      <button type="submit" class="modal__btn">Войти</button>
+      <div class="modal__btns">
+        <a href="#" class="modal__link">Регистрация</a>
+        <a href="#" class="modal__link modal__link--orange">Забыли пароль?</a>
+      </div>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-h2">заказать звонок</p>
+    <form action="#" method="post" class="modal__form">
+      <label for="name" class="modal__label">Имя*</label>
+      <input type="text" id="name" class="form__input" required>
+      <label for="phone" class="modal__label">Телефон*</label>
+      <input type="tel" id="phone" class="form__input" required>
+      <input type="checkbox" id="robot" class="form__checkbox" checked>
+      <label for="robot" class="form__check">Я не робот</label>
+      <button type="submit" class="modal__btn">заказать</button>
+    </form>
+  </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
