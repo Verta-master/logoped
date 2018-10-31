@@ -1,3 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  
+  &--scroll {
+    .header__call,
+    .logo p {
+      display: none;
+    }
+    .header__contact {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header__phone {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+    .header__block {
+      flex-grow: 1;
+    }
+  }
+}
+
 .header__wrap {
   display: flex;
   justify-content: space-between;

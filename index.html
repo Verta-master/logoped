@@ -22,7 +22,7 @@
         </div>
         <div class="header__contact">
           <a href="tel:+74951207547" class="header__phone">+7 (495) 120 75 47</a>
-          <a href="#" class="header__call">заказать звонок</a>
+          <a data-fancybox data-src="#call" href="javascript:;" class="header__call">заказать звонок</a>
         </div>
         <div class="header__user">
           <a data-fancybox data-src="#login" href="javascript:;" class="header__login" title="Войти"></a>
@@ -100,6 +100,10 @@
             <a href="Tel:+74951207547" class="menu__link">+7 (495) 120 75 47</a>
           </li>
         </ul>
+        <form action="#" method="get" class="search">
+          <input type="text" class="search__input" placeholder="Поиск">
+          <button type="button" class="search__btn" title="Поиск"></button>
+        </form>
       </div>
     </nav>
   </header>
@@ -492,7 +496,7 @@
     </div>
   </footer>
   
-  <!-- Modal window -->
+  <!-- Modal windows -->
   <div style="display: none;" id="login" class="modal">
     <p class="title-h2">Вход</p>
     <form action="#" method="post" class="modal__form">
@@ -507,6 +511,19 @@
         <a href="#" class="modal__link">Регистрация</a>
         <a href="#" class="modal__link modal__link--orange">Забыли пароль?</a>
       </div>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-h2">заказать звонок</p>
+    <form action="#" method="post" class="modal__form">
+      <label for="name" class="modal__label">Имя*</label>
+      <input type="text" id="name" class="form__input" required>
+      <label for="phone" class="modal__label">Телефон*</label>
+      <input type="tel" id="phone" class="form__input" required>
+      <input type="checkbox" id="robot" class="form__checkbox" checked>
+      <label for="robot" class="form__check">Я не робот</label>
+      <button type="submit" class="modal__btn">заказать</button>
     </form>
   </div>
   
@@ -525,6 +542,8 @@
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
+      autoplay: true,
+      loop: true,
     });
     
     var mySwiper = new Swiper ('.blog__slider', {
