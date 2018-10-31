@@ -2684,7 +2684,7 @@ span.pages__link {
   display: none;
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: 51px;
   left: 0;
   right: 0;
   padding-bottom: 40px;
